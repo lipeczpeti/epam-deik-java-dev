@@ -7,7 +7,8 @@ Feature: allow creating accounts and logging in
   @grade2-requirement
   Scenario: the admin account exists by default and can be logged in with the correct password
     When the user types the "sign in privileged admin admin" command
-    And the user types the "describe account" command
+    Then the next line of the output is ""
+    When the user types the "describe account" command
     Then the next line of the output is "Signed in with privileged account 'admin'"
 
   @grade2-requirement

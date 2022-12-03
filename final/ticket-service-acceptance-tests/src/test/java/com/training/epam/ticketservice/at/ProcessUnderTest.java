@@ -47,7 +47,6 @@ public class ProcessUnderTest implements AutoCloseable {
         return runWithTimeout(() -> output.readLine(), timeout);
     }
 
-
     @Override
     public void close() {
         process.destroy();
